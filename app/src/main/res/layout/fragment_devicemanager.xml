@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device management"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new device"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:orientation="vertical"
+        android:rowCount="5"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/media_box_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Media Box" />
+
+        <Button
+            android:id="@+id/wile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="WILE" />
+
+        <Button
+            android:id="@+id/ble_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="BLE Mesh" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Zigbee" />
+
+        <Button
+            android:id="@+id/rf_remote_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="RF Remote" />
+
+    </GridLayout>
+
+</LinearLayout>

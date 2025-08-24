@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan RF Remote"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the RF remote you want to scan, then press the 'Start scan' button."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
+
+    <Spinner
+        android:id="@+id/remote_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make sure the remote is pointing towards the device and press the button you want to scan."
+        android:padding="8dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Cancel"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Start scan"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

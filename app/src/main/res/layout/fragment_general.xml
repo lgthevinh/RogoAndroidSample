@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="horizontal">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:alignmentMode="alignMargins"
+            android:columnCount="4">
+
+            <Button
+                android:id="@+id/group_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group" />
+
+            <Button
+                android:id="@+id/device_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device" />
+
+            <Button
+                android:id="@+id/scenario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scenario" />
+
+            <Button
+                android:id="@+id/automation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automation" />
+
+            <Button
+                android:id="@+id/rface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RFace" />
+
+            <Button
+                android:id="@+id/iotlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IoTLink" />
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setting" />
+
+            <Button
+                android:id="@+id/thingflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ThingFlow" />
+
+
+        </GridLayout>
+
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/device_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="0dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

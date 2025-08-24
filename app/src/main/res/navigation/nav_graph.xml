@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sample.clone.rogo.fragment.splash.SplashFragment"
+        android:label="SplashFragment" />
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.sample.clone.rogo.fragment.authentication.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_signInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.sample.clone.rogo.fragment.authentication.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.sample.clone.rogo.fragment.authentication.ForgotPasswordFragment"
+        android:label="ForgetPasswordFragment" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationManagerFragment"
+        android:name="com.sample.clone.rogo.fragment.location.LocationManagerFragment"
+        android:label="LocationManagerFragment" />
+
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.sample.clone.rogo.fragment.general.GeneralFragment"
+        android:label="GeneralFragment" >
+        <action
+            android:id="@+id/action_generalFragment_to_groupManagerFragment"
+            app:destination="@id/groupManagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_generalFragment_to_deviceManagerFragment"
+            app:destination="@id/deviceManagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_generalFragment_to_RFaceFragment"
+            app:destination="@id/RFaceFragment" />
+        <action
+            android:id="@+id/action_generalFragment_to_ioTLinkFragment"
+            app:destination="@id/ioTLinkFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/groupManagerFragment"
+        android:name="com.sample.clone.rogo.fragment.group.GroupManagerFragment"
+        android:label="GroupManagerFragment" />
+
+    <fragment
+        android:id="@+id/deviceManagerFragment"
+        android:name="com.sample.clone.rogo.fragment.device.DeviceManagerFragment"
+        android:label="DeviceManagerFragment" >
+        <action
+            android:id="@+id/action_deviceManagerFragment_to_configWile"
+            app:destination="@id/scanWileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_deviceManagerFragment_to_checkCenterDeviceFragment"
+            app:destination="@id/checkCenterDeviceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_deviceManagerFragment_to_setupMediaBoxFragment"
+            app:destination="@id/setupMediaBoxFragment" />
+        <action
+            android:id="@+id/action_deviceManagerFragment_to_checkRFGatewayFragment"
+            app:destination="@id/checkRFGatewayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanWileFragment"
+        android:name="com.sample.clone.rogo.fragment.device.wile.ScanWileFragment"
+        android:label="ScanWileFragment" >
+        <action
+            android:id="@+id/action_scanWileFragment_to_setupWileFragment"
+            app:destination="@id/setupWileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_scanWileFragment_to_setupWileLanDirectFragment"
+            app:destination="@id/setupWileLanDirectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setupWileFragment"
+        android:name="com.sample.clone.rogo.fragment.device.wile.SetupWileFragment"
+        android:label="SetupWileFragment">
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_generalFragment"
+        app:destination="@id/generalFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left" />
+
+    <action
+        android:id="@+id/action_to_signInFragment"
+        app:destination="@id/signInFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_to_locationManagerFragment"
+        app:destination="@id/locationManagerFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left" />
+    <fragment
+        android:id="@+id/checkCenterDeviceFragment"
+        android:name="com.sample.clone.rogo.fragment.device.ble.CheckCenterDeviceFragment"
+        android:label="CheckCenterDeviceFragment" >
+        <action
+            android:id="@+id/action_checkCenterDeviceFragment_to_scanBleFragment"
+            app:destination="@id/scanBleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanBleFragment"
+        android:name="com.sample.clone.rogo.fragment.device.wile.ScanBleFragment"
+        android:label="ScanBleFragment" >
+        <action
+            android:id="@+id/action_scanBleFragment_to_setupBleFragment"
+            app:destination="@id/setupBleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/setupBleFragment"
+        android:name="com.sample.clone.rogo.fragment.device.ble.SetupBleFragment"
+        android:label="SetupBleFragment" />
+    <fragment
+        android:id="@+id/setupMediaBoxFragment"
+        android:name="com.sample.clone.rogo.fragment.device.mediabox.SetupMediaBoxFragment"
+        android:label="SetupMediaBoxFragment" />
+    <fragment
+        android:id="@+id/RFaceFragment"
+        android:name="com.sample.clone.rogo.fragment.rface.RFaceFragment"
+        android:label="RFaceFragment" />
+    <fragment
+        android:id="@+id/ioTLinkFragment"
+        android:name="com.sample.clone.rogo.fragment.iotlink.IoTLinkFragment"
+        android:label="IoTLinkFragment" />
+    <fragment
+        android:id="@+id/checkRFGatewayFragment"
+        android:name="com.sample.clone.rogo.fragment.device.rf.CheckRfGatewayFragment"
+        android:label="CheckRFGatewayFragment" >
+        <action
+            android:id="@+id/action_checkRFGatewayFragment_to_scanRfDeviceFragment"
+            app:destination="@id/scanRfDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanRfDeviceFragment"
+        android:name="com.sample.clone.rogo.fragment.device.rf.ScanRfDeviceFragment"
+        android:label="ScanRfDeviceFragment" >
+        <action
+            android:id="@+id/action_scanRfDeviceFragment_to_setupRfDeviceFragment"
+            app:destination="@id/setupRfDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupRfDeviceFragment"
+        android:name="com.sample.clone.rogo.fragment.device.rf.SetupRfDeviceFragment"
+        android:label="SetupRfDeviceFragment" />
+    <fragment
+        android:id="@+id/setupWileLanDirectFragment"
+        android:name="com.sample.clone.rogo.fragment.device.wile.SetupWileLanDirectFragment"
+        android:label="SetupWileLanDirectFragment" />
+
+
+</navigation>

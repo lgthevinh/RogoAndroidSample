@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New group"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/label_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Label"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/description_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/room_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/virtual_group_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group function"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create" />
+
+</LinearLayout>
