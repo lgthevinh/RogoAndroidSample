@@ -34,6 +34,7 @@ class SetupWileLanDirectFragment: Fragment() {
         sharedViewHolder.deviceInfoData.observe(viewLifecycleOwner) { deviceInfo ->
             deviceInfo?.let {
                 val configButton = view.findViewById<Button>(R.id.config_wile_lan_direct_button)
+                println("Device label ${deviceInfo.label}")
 
                 SmartSdk.configWileDirectDeviceHandler().connectAndIdentifyDevice(deviceInfo, object:
                     SetupWileDirectDeviceCallback {
@@ -45,7 +46,7 @@ class SetupWileLanDirectFragment: Fragment() {
                         configButton.isEnabled = true
                         configButton.isClickable = true
 
-                        val infoDialog = InfoDialog("Device Info", "Device ID: $p0\nNetwork Connectivity: $p1")
+                        val infoDialog = InfoDialog("Device Info", "MAC Address: $p0")
                         infoDialog.show(parentFragmentManager, "InfoDialog")
                     }
 
@@ -64,7 +65,7 @@ class SetupWileLanDirectFragment: Fragment() {
                     // Get device label
                     SmartSdk.configWileDirectDeviceHandler()
                         .setupAndSyncDeviceToCloud(
-                            deviceInfo.label,
+                            SmartSdk.getProductModel(deviceInfo.productId).name,
                             null,
                             SmartSdk.getProductModel(deviceInfo!!.productId).devSubType,
                             object: RequestCallback<IoTDevice> {
