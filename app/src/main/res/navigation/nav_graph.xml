@@ -68,10 +68,19 @@
             app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_generalFragment_to_RFaceFragment"
-            app:destination="@id/RFaceFragment" />
+            app:destination="@id/RFaceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <action
             android:id="@+id/action_generalFragment_to_ioTLinkFragment"
-            app:destination="@id/ioTLinkFragment" />
+            app:destination="@id/ioTLinkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_generalFragment_to_thingFlowFragment"
+            app:destination="@id/thingFlowFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
 
     <fragment
@@ -112,7 +121,9 @@
             app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_scanWileFragment_to_setupWileLanDirectFragment"
-            app:destination="@id/setupWileLanDirectFragment" />
+            app:destination="@id/setupWileLanDirectFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
 
     <fragment
@@ -197,6 +208,10 @@
         android:id="@+id/setupWileLanDirectFragment"
         android:name="com.sample.clone.rogo.fragment.device.wile.SetupWileLanDirectFragment"
         android:label="SetupWileLanDirectFragment" />
+    <fragment
+        android:id="@+id/thingFlowFragment"
+        android:name="com.sample.clone.rogo.fragment.thingflow.ThingFlowFragment"
+        android:label="ThingFlowFragment" />
 
 
 </navigation>

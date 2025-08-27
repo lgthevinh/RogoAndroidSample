@@ -82,13 +82,11 @@ class GeneralFragment: Fragment() {
         deviceRecyclerView.adapter = deviceAdapter
         deviceRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        val groupButton = view.findViewById<Button>(R.id.group_button)
-        groupButton.setOnClickListener {
+        view.findViewById<Button>(R.id.group_button).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_generalFragment_to_groupManagerFragment)
         }
 
-        val deviceButton = view.findViewById<Button>(R.id.device_button)
-        deviceButton.setOnClickListener {
+        view.findViewById<Button>(R.id.device_button).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_generalFragment_to_deviceManagerFragment)
         }
 
@@ -98,6 +96,10 @@ class GeneralFragment: Fragment() {
 
         view.findViewById<Button>(R.id.iotlink).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_generalFragment_to_ioTLinkFragment)
+        }
+
+        view.findViewById<Button>(R.id.thingflow).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_generalFragment_to_thingFlowFragment)
         }
     }
 }
